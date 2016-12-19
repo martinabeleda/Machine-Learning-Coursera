@@ -1,4 +1,5 @@
-# Data Science Coursera
+# Data Science Notes
+
 Stuff for data science specialisation.
 
 Source code contains my assignments/exercises. 
