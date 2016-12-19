@@ -31,9 +31,9 @@ spam_pred == emails$spam
 
 1. Fit the linear model using `model <- lm(y ~ x)`.
 
-2. Create a frame of the values to predict `future <- data.frame(x = <...>)`.
+2. Create a frame of the values to predict `unseen <- data.frame(x = <...>)`.
 
-3. Predict the output for the values `pred <- predict(model, future)`.
+3. Predict the output for the values `pred <- predict(model, unseen)`.
 
 4. Plot.
 
@@ -77,3 +77,30 @@ table(species, kmeans_iris$cluster)
 # Plot Petal.Width against Petal.Length, coloring by cluster
 plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans_iris$cluster)
 ```
+
+# Supervised vs. Unsupervised
+## Supervised Learning
+
+* To find a function which can be used to assign a class or value to unseen observations.
+
+* Given a set of labelled observations.
+
+* May compare real labels with the predicted labels.
+
+## Unsupervised Learning
+
+* Does not require labelled data.
+
+* Example: Clustering
+
+* Not able to compare real labels.
+
+## Semi-Supervised Learning
+
+* A lot of unlabelled observations with a few that are.
+
+* Group similar observations using clustering.
+
+* Use the existing labels combined with clustering information to provide labels. 
+
+
