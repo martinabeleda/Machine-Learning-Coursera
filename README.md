@@ -1,8 +1,8 @@
 # Data Science Notes
 
-Stuff for data science specialisation.
+Various notes on data science from a range of content providers.
 
-Source code contains my assignments/exercises. 
+Source code contains my assignments, models and exercises.
 
-See the [wiki](https://github.com/martinabeleda/data-science-coursera/wiki) for lecture notes. 
+See the [wiki](https://github.com/martinabeleda/data-science-coursera/wiki) for notes. 
 
