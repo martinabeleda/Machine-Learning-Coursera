@@ -49,6 +49,9 @@ combi$FamilyID <- factor(combi$FamilyID)
 
 summary(combi$Age)
 
+install.packages('rpart')
+library(rpart)
+
 # Grow a tree on the subset of data with ages
 agefit <- rpart(Age ~ Pclass + Sex + SibSp + Parch + Fare + Embarked + Title + FamilySize,
                 data = combi[!is.na(combi$Age), ],
@@ -87,6 +90,11 @@ combi$FamilyID2[combi$FamilySize <= 3] <- 'Small'
 # Convert back to a factor
 combi$FamilyID2 <- factor(combi$FamilyID2)
 
+# Split back into test and train sets
+train <- combi[1:891, ]
+test <- combi[892:1309, ]
+
+
 # Install and load the randomForest package
 install.packages('randomForest')
 library(randomForest)
@@ -96,11 +104,11 @@ set.seed(415)
 
 # Create the model
 fit <- randomForest(as.factor(Survived) ~ Pclass + Sex + Age + SibSp + Parch + Fare + 
-                                          Embarked + Title + FamilySize + FamilyID2
+                                          Embarked + Title + FamilySize + FamilyID2,
                     data = train,
                     importance = TRUE,
                     ntree = 2000)
-
+  
 # Check which variables were important
 varImpPlot(fit)
 
@@ -110,14 +118,14 @@ submit <- data.frame(PassengerId = test$PassengerId, Survived = prediction)
 write.csv(submit, file = "tutorial5_output.csv", row.names = FALSE)
 
 # Install and load the party package
-install.package('party')
+install.packages('party')
 library(party)
 
 set.seed(415)
 
 # Build a conditional forest
 fit <- cforest(as.factor(Survived) ~ Pclass + Sex + Age + SibSp + Parch + Fare + 
-                                    Embarked + Title + FamilySize + FamilyID2
+                                    Embarked + Title + FamilySize + FamilyID2,
                     data = train,
                     controls = cforest_unbiased(ntree = 2000, mtry = 3)) 
 
@@ -125,4 +133,3 @@ fit <- cforest(as.factor(Survived) ~ Pclass + Sex + Age + SibSp + Parch + Fare +
 prediction <- predict(fit, test, OOB = TRUE, type = "response")
 submit <- data.frame(PassengerId = test$PassengerId, Survived = prediction)
 write.csv(submit, file = "tutorial5_output2.csv", row.names = FALSE)
-
