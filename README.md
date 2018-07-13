@@ -1,8 +1,15 @@
-# Data Science Notes
+# Coursera Machine Learning
 
-Various notes on data science from a range of content providers.
+Exercises from Coursera's Machine Learning online course by Andrew Ng.
 
-Source code contains my assignments, models and exercises.
+## Run Jupyter Notebook
+Activate Python 3 environment
 
-See the [wiki](https://github.com/martinabeleda/data-science-coursera/wiki) for notes. 
+```
+source activate py36
+```
 
+Run Jupyter notebooks
+```
+jupyter notebook
+```
