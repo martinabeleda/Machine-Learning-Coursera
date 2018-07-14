@@ -1,8 +1,9 @@
-# Data Science Notes
+# Coursera Machine Learning
 
-Various notes on data science from a range of content providers.
+My solutions to Coursera's Machine Learning exercises by Andrew Ng.
 
-Source code contains my assignments, models and exercises.
-
-See the [wiki](https://github.com/martinabeleda/data-science-coursera/wiki) for notes. 
-
+[Exercise 1.1 - Linear Regression](https://nbviewer.jupyter.org/github/martinabeleda/Machine-Learning-Coursera/blob/master/Exercise%201.1%20-%20Linear%20Regression.ipynb)
+[Exercise 1.2 - Multivariate Linear Regression](https://nbviewer.jupyter.org/github/martinabeleda/Machine-Learning-Coursera/blob/master/Exercise%201.2%20-%20Multivariate%20Linear%20regression.ipynb)
+[Exercise 2.1 - Logistic Regression](https://nbviewer.jupyter.org/github/martinabeleda/Machine-Learning-Coursera/blob/master/Exercise%202.1%20-%20Logistic%20Regression.ipynb)
+[Exercise 2.2 - Regularised Logistic Regression](https://nbviewer.jupyter.org/github/martinabeleda/Machine-Learning-Coursera/blob/master/Exercise%202.2%20-%20Regularised%20Logistic%20Regression.ipynb)
+[Exercise 3.1 - Multi-Class Classification](https://nbviewer.jupyter.org/github/martinabeleda/Machine-Learning-Coursera/blob/master/Exercise%203.1%20-%20Multi-Class%20Classification.ipynb)
